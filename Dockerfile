@@ -14,5 +14,5 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install -j$(nproc) mbstring \
     && docker-php-ext-install -j$(nproc) exif \
     && echo "log_errors=On" > /usr/local/etc/php/php.ini \
-    && echo "error_log = /dev/stderr" >> /usr/local/etc/php/php.ini
+    && echo "error_log = /dev/stderr" >> /usr/local/etc/php/php.ini \
     && a2enmod rewrite
